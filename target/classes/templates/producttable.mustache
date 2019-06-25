@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Товары</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+    <style>
+        input {
+            width: 100%;
+            margin: 2px;
+            font-size: 11pt;
+        }
+
+        select {
+            width: 101%;
+            margin: 2px;
+            font-size: 11pt;
+        }
+
+        .w30 {
+            width: 31%;
+        }
+    </style>
+
+</head>
+<body>
+<p><a href="/main">Главная</a></p>
+
+<div align="center">
+    <form method="post">
+
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+
+        <table align="center" border="0" cellpadding="0" cellspacing="1" style="width:80%">
+            <tbody>
+            <tr>
+                <td style="width: 45%">
+                    <select name="productName">
+                        {{#productNames}}
+                            <option value="{{label}}">{{label}}</option>
+
+                        {{/productNames}}
+                    </select>
+                </td>
+                <td style="width: 10%">&nbsp;</td>
+                <td style="width: 45%">
+                    <input type="text" name="quantity" placeholder="Количество" class="w30">
+
+                    <select name="currency" class="w30">
+
+                        <option value="RUB">RUB</option>
+                        <option value="BYN">BYN</option>
+                        <option value="USD">USD</option>
+
+                    </select>
+
+
+                    <input type="text" name="course" placeholder="Курс" class="w30">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <select name="gender">
+                        <option value="-">-</option>
+                        <option value="ДЕТ">ДЕТ</option>
+                        <option value="ЖЕН">ЖЕН</option>
+                        <option value="МУЖ">МУЖ</option>
+
+                    </select>
+
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="text" name="importPrice" placeholder="Цена Ввоза" class="w30">
+                    <input type="text" name="coefficient" placeholder="Коэффициент" class="w30">
+                    <input type="text" name="retailPrice" placeholder="Цена Розничная" class="w30">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="trademark" placeholder="Торговая Марка">
+                </td>
+                <td>&nbsp;</td>
+                <td>
+
+                    <select name="season" >
+
+                        <option value="ДЕМИ">ДЕМИ</option>
+                        <option value="ЗИМА">ЗИМА</option>
+                        <option value="КРУГЛОСЕЗОННЫЙ">КРУГЛОСЕЗОННЫЙ</option>
+                        <option value="ЛЕТО">ЛЕТО</option>
+
+                    </select>
+
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <select name="importer">
+                    <option
+                            value="ИП Роденя А.М. УНП 291482064 РБ  225254  Брестская обл., Ивацевичский р-н, аг.Воля, ул.Административная, 16">
+                        ИП Роденя А.М. УНП 291482064 РБ 225254 Брестская обл., Ивацевичский р-н, аг.Воля,
+                        ул.Административная, 16
+                    </option>
+                    <option
+                            value="ООО 'Вориор', 225295, Республика Беларусь, Брестская область, город Ивацевичи, улица Парковая, дом 2">
+                        ООО 'Вориор', 225295, Республика Беларусь, Брестская область, город Ивацевичи, улица
+                        Парковая, дом 2
+                    </option>
+
+                    <option
+                            value="ИП Роденя Т.В. УНП 291535496 РБ  225254  Брестская обл., Ивацевичский р-н, аг.Воля, ул.Административная, 1А">
+                        ИП Роденя Т.В. УНП 291535496 РБ 225254 Брестская обл., Ивацевичский р-н, аг.Воля,
+                        ул.Административная, 1А
+                    </option>
+
+                    <option
+                            value="ИП Роденя М.М. УНП 291577243 РБ  225254  Брестская обл., Ивацевичский р-н, аг.Воля, ул.Административная, 1А">
+                        ИП Роденя М.М. УНП 291577243 РБ 225254 Брестская обл., Ивацевичский р-н, аг.Воля,
+                        ул.Административная, 1А
+                    </option>
+                </select>
+
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <select name="countryOfEntry">
+                        <option value="КНДР">КНДР</option>
+                        <option value="РФ">РФ</option>
+                        <option value="РБ">РБ</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <select name="manufacturer">
+                        <option value="Unionwin Import & Export Co. Limited, адрес: ГОНКОНГ, Room 905 WorkingbergComm BLDG 41-47 Marble RD">
+                            Unionwin Import & Export Co. Limited, адрес: ГОНКОНГ, Room 905 WorkingbergComm BLDG 41-47 Marble RD
+                        </option>
+                        <option value="-">-</option>
+                    </select>
+
+
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="text" name="note" placeholder="Примечание">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span> <input type="text" name="article" placeholder="Артикул" style=" width: 47%;"> </span>
+                    <span> <input type="text" name="code" placeholder="Внешний Код" style=" width: 47%;"> </span>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="composition">
+                        {{#compositions}}
+                            <option value="{{label}}">{{label}}</option>
+
+                        {{/compositions}}
+                    </select>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="text" name="size" placeholder="Размер">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="date" name="dateArrive" placeholder="Дата прихода">
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="text" name="barcode" placeholder="Штрихкод" style="display: none">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button type="submit" style="margin: 10px">Добавить</button>
+    </form>
+</div>
+
+
+<div style="margin-top: 5px"></div>
+<div style="text-align:center; ">
+    <table align="center" border="1" cellpadding="2" cellspacing="0" style="width:100%;     border-color: lightgray;">
+        <tbody>
+        <tr style="text-align:center; font-size:12px">
+            <td>Действие</td>
+            <td>Наименование товара</td>
+            <td>Пол</td>
+            <td>Размер</td>
+            <td>Торговая Марка</td>
+            <td>Импортер</td>
+            <td>Производитель</td>
+            <td>Артикул</td>
+            <td>Внешний Код</td>
+            <td>Состав</td>
+            <td>Сезон</td>
+            <td>Штрихкод</td>
+            <td>Примечание</td>
+            <td>Дата Прихода</td>
+            <td>Количество</td>
+            <td>Цена Ввоза</td>
+            <td>Коэффициент</td>
+            <td>Цена Розничная</td>
+            <td>Страна Ввоза</td>
+            <td>Валюта</td>
+            <td>Курс</td>
+        </tr>
+        {{#products}}
+            <div>
+
+
+                <tr style="text-align:left; font-size:9px">
+                    <td>
+                        <form method="post" action="searchdoc" style="width: 65px;">
+                            <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+                            <input type="text" name="filter" value="{{barcode}}" style="display: none">
+                            <button type="submit">Печать</button>
+                        </form>
+
+
+                    <td>{{productName}}</td>
+                    <td>{{gender}}</td>
+                    <td>{{size}}</td>
+                    <td>{{trademark}}</td>
+                    <td>{{importer}}</td>
+                    <td>{{manufacturer}}</td>
+                    <td>{{article}}</td>
+                    <td>{{code}}</td>
+                    <td>{{composition}}</td>
+                    <td>{{season}}</td>
+                    <td>{{barcode}}</td>
+                    <td>{{note}}</td>
+                    <td>{{dateArrive}}</td>
+                    <td>{{quantity}}</td>
+                    <td>{{importPrice}}</td>
+                    <td>{{coefficient}}</td>
+                    <td>{{retailPrice}}</td>
+                    <td>{{countryOfEntry}}</td>
+                    <td>{{currency}}</td>
+                    <td>{{course}}</td>
+
+
+                </tr>
+            </div>
+        {{/products}}
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>

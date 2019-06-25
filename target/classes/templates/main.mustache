@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Главная страница</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+
+</head>
+
+<body>
+
+<div>
+    <table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+        <tbody>
+        <tr >
+            <td style="width: 15%">
+                <div><a href="/producttable">Список товаров</a></div>
+            </td>
+            <td style="width: 65%">&nbsp;</td>
+            <td style="width: 5%">&nbsp;</td>
+            <td style="width: 15%">
+                <div>
+                    <form action="/logout" method="post">
+                        <p style=" text-align: right;">
+                            <input name="_csrf" type="hidden" value="{{_csrf.token}}" /> <input type="submit" value="Выйти" />
+                        </p>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><a href="/productname">Словарь. Наименование товара</a></div>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp; <div><a href="/composition">Словарь. Состав</a></div></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
