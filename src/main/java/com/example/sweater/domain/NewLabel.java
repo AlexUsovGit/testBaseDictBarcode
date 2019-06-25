@@ -2,16 +2,16 @@ package com.example.sweater.domain;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
-import javafx.scene.control.Cell;
 
-import java.io.FileNotFoundException;
+
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 
 public class NewLabel  {
